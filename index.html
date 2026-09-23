@@ -880,7 +880,7 @@ exports.init = init;
             document.getElementById("staticrypt-form").addEventListener("submit", async function (e) {
                 e.preventDefault();
 
-                const password = document.getElementById("staticrypt-password").value,
+                const password = document.getElementById("staticrypt-password").value.trim(),
                     isRememberChecked = document.getElementById("staticrypt-remember").checked;
 
                 const { isSuccessful } = await staticrypt.handleDecryptionOfPage(password, isRememberChecked);
